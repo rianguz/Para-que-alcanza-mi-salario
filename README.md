@@ -1,8 +1,8 @@
-# Para-que-alcanza-mi-salario
+# ¿Para qué alcanza mi salario?
 
 ¿Para qué alcanza mi salario en Colombia?, es un proyecto que pretende ilustrar con productos, bienes y artículos qué tanta calidad de vida se puede gozar con el salario que se tiene y cuánto necesitaria aspirar a ganar para darse otros lujos.
 
-** Pasos **
+**Pasos**
 
 1. Creación de la lógica para saber que tantos artículos podemos comprar con nuestro salario
 2. Actualización de la estructura para pedir los datos al usuario
