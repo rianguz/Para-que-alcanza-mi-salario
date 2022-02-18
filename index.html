@@ -6,32 +6,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/main.css">
     <title>¿Para qué alcanza mi salario en Colombia?</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;600;700&family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>¿Para qué alcanza mi salario?</h1>
-    <p>¿Para qué alcanza mi salario?, es un proyecto que pretende ilustrar con productos, bienes y artículos qué tanta calidad de vida se puede gozar con el salario que se tiene y cuánto necesitaria aspirar a ganar para darse otros lujos.</p>
+    <main>
+        <section class="apertura">
+            <h1>¿Para qué alcanza mi salario?</h1>
+            <p>¿Para qué alcanza mi salario?, es un proyecto que pretende ilustrar con productos, bienes y artículos qué tanta calidad de vida se puede gozar con el salario que se tiene y cuánto necesitaria aspirar a ganar para darse otros lujos.</p>
+        </section>
+    
+        <section class="cuanto-alcanza-container">
+            <h2>Cuánto podría comprar con mi salario</h2>
+            <div class="cont-input-salary">
+                <label for="inputSalary">¿Cuál es tu salario?</label>
+                <input type="number" id="inputSalary" />
+            </div>
+            <div class="cont-input-articles">
+                <input type="button" value="Empanadas" id="empanadas" onclick="calculateEmpanadas()">
+                <input type="button" value="Hamburguesas" id="burguers" onclick="calculateBurguers()">
+                <input type="button" value="Pasajes de TM" id="pasajesTM" onclick="calculatePasajes()">
+                <input type="button" value="Petacos de cerveza" id="petacosCerveza" onclick="calculatePetacos()">
+            </div>
+            
+            <p id="results"></p>
+        </section>
+    
+        <section class="cuanto-necesito-container">
+            <h2>Cuánto debería ganar para poder comprar bienes</h2>
+            <div class="cont-input-salary">
+                <label for="percentSalary">¿Qué porcentaje de tu sueldo hipotético destinarías para el pago?</label>
+                <input type="number" id="percentSalary">
+            </div>
+            <div class="cont-input-salary">
+                <label for="timeToPay">¿En cuánto tiempo quisieras pagar?</label>
+                <input type="number" id="timeToPay">
+            </div>
+            
+            <div class="cont-input-articles">
+                <input type="button" value="Casa" id="casa" onclick="calculateCasa()">
+                <input type="button" value="Carro" id="carro" onclick="calculateCarro()">
+                <input type="button" value="Viaje a París" id="viajeParis" onclick="calculateViajeParis()">
+            </div>
 
-    <section class="cuanto-alcanza-container">
-        <label for="inputSalary">¿Cuál es tu salario?</label>
-        <input type="number" id="inputSalary" />
-        <input type="button" value="Empanadas" id="empanadas" onclick="calculateEmpanadas()">
-        <input type="button" value="Hamburguesas" id="burguers" onclick="calculateBurguers()">
-        <input type="button" value="Pasajes de TM" id="pasajesTM" onclick="calculatePasajes()">
-        <input type="button" value="Petacos de cerveza" id="petacosCerveza" onclick="calculatePetacos()">
-        
-        <p id="results"></p>
-    </section>
-
-    <section class="cuanto-necesito-container">
-        <label for="percentSalary">¿Qué porcentaje de tu sueldo hipotético destinarías para el pago?</label>
-        <input type="number" id="percentSalary">
-        <label for="timeToPay">¿En cuánto tiempo quisieras pagar?</label>
-        <input type="number" id="timeToPay">
-        <input type="button" value="Casa" id="casa" onclick="calculateCasa()">
-        <input type="button" value="Carro" id="carro" onclick="calculateCarro()">
-        <input type="button" value="Viaje a París" id="viajeParis" onclick="calculateViajeParis()">
-        <p id="needToEarn"></p>
-    </section>
+            <p id="needToEarn"></p>
+            <p>* Precio de la casa tomado para hacer los cálculos <br> ** El precio para hacer el cálculo corresponde a este modelo en particular</p>
+        </section>
+    </main>
 
     <script src="/main.js"></script>
 </body>

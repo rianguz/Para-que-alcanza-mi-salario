@@ -2,4 +2,169 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Cabin', sans-serif;
+}
+
+:root{
+    --light-pink: #F7F3DD;
+    --dark-green: #082613;
+    --medium-green: #085013;
+    --big: 48px;
+    --medium: 24px;
+    --small: 16px;
+}
+
+main{
+    width: 100%;
+    height: 100%;
+    padding: 80px;
+    background-color: var(--light-pink);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.apertura{
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 40px;
+}
+
+.apertura h1{
+    font-size: var(--big);
+    font-weight: 700;
+    color: var(--dark-green);
+    margin-bottom: 16px;
+}
+
+.apertura p{
+    font-size: var(--small);
+    font-weight: 300;
+    color: var(--medium-green);
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--medium-green);
+}
+
+.cuanto-alcanza-container,
+.cuanto-necesito-container{
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom: 40px;
+    border-bottom: 1px solid var(--medium-green);
+    margin-bottom: 40px;
+}
+
+.cuanto-alcanza-container h2,
+.cuanto-necesito-container h2{
+    font-size: var(--medium);
+    color: var(--dark-green);
+    font-weight: 400;
+    margin-bottom: 40px;
+}
+
+.cuanto-alcanza-container .cont-input-salary,
+.cuanto-necesito-container .cont-input-salary{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.cuanto-alcanza-container .cont-input-salary label,
+.cuanto-necesito-container .cont-input-salary label{
+    font-size: var(--small);
+    font-weight: 700;
+    color: var(--medium-green);
+    margin-right: 16px;
+}
+
+.cuanto-alcanza-container .cont-input-salary input,
+.cuanto-necesito-container .cont-input-salary input{
+    font-size: var(--small);
+    background-color: transparent;
+    border: 2px solid var(--medium-green);
+    color: var(--medium-green);
+    border-radius: 20px;
+    width: 200px;
+    height: 30px;
+    padding: 8px 16px;
+}
+
+.cuanto-alcanza-container .cont-input-salary input:hover,
+.cuanto-necesito-container .cont-input-salary input:hover{
+    background-color: #ffffff7c;
+}
+
+.cuanto-alcanza-container .cont-input-articles,
+.cuanto-necesito-container .cont-input-articles{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.cuanto-alcanza-container .cont-input-articles input,
+.cuanto-necesito-container .cont-input-articles input{
+    width: 200px;
+    height: auto;
+    border-radius: 20px;
+    margin: auto 8px;
+    background-color: var(--dark-green);
+    border: none;
+    font-size: var(--small);
+    color: white;
+    padding: 8px;
+    cursor: pointer;
+}
+
+.cuanto-alcanza-container #results,
+.cuanto-necesito-container #needToEarn{
+    display: flex;
+    width: 450px;
+    height: auto;
+    padding: 20px;
+    background-color: #e0dbba;
+    border-radius: 20px;
+    margin: 0 auto;
+    font-size: var(--small);
+    color: var(--dark-green);
+    text-align: center;
+}
+
+.cuanto-necesito-container #needToEarn{
+    margin-bottom: 24px;
+}
+
+@media (max-width: 800px){
+    main{
+        padding: 60px;
+    }
+    .apertura,
+    .cuanto-alcanza-container,
+    .cuanto-necesito-container{
+        width: 100%;
+    }
+    .cuanto-alcanza-container .cont-input-articles,
+    .cuanto-necesito-container .cont-input-articles{
+        flex-wrap: wrap;
+        column-gap: 20px;
+    }
+    .cuanto-alcanza-container .cont-input-articles input,
+    .cuanto-necesito-container .cont-input-articles input{
+        margin-bottom: 10px;
+    }
+    .cuanto-alcanza-container #results,
+    .cuanto-necesito-container #needToEarn{
+        width: 100%;
+    }
+    .cuanto-alcanza-container .cont-input-salary,
+    .cuanto-necesito-container .cont-input-salary{
+        flex-direction: column;
+    }
+    .cuanto-alcanza-container .cont-input-salary label, 
+    .cuanto-necesito-container .cont-input-salary label{
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
 }
